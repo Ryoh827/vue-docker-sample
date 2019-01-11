@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    image: 'peta727/vue-cli-alpine'
+    ports:
+      - '8080:8080'
+    volumes:
+      - '.:/app'
+    tty: true
+    command: bash -c "cd vue-sample-in-docker && yarn && yarn serve"
